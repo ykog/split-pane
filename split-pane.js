@@ -232,11 +232,11 @@ https://raw.github.com/shagstrom/split-pane/master/LICENSE
 	}
 
 	function pageXof(event) {
-		return event.pageX || event.originalEvent.pageX;
+		return event.pageX || event.originalEvent.pageX || (event.originalEvent.touches && event.originalEvent.touches[0].pageX) ;
 	}
 
 	function pageYof(event) {
-		return event.pageY || event.originalEvent.pageY;
+		return event.pageY || event.originalEvent.pageY || (event.originalEvent.touches && event.originalEvent.touches[0].pageY) ;
 	}
 
 	function minHeight(element) {
